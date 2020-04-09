@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оператор return</title>
+    <script type="text/javascript">
+        let res = 0;
+        function sum(a, b) {
+            return a + b;
+        }
+        res = sum(1, 2);
+        document.write("<p>res = " + res);
+        function exponentiation(num, pow) {
+            let res = num;
+            if (pow == 1){
+                return res;
+            }else if (pow == 0){
+                res = 1;
+            }else if (pow < 0){
+                pow = Math.abs(pow);
+                for (let i = 2; i <= pow; i++)
+                    res *= num;
+                res = 1 / res;
+            }else{
+                for (let i = 2; i <= pow; i++)
+                    res *= num;
+            }
+            return res;
+        }
+        res = exponentiation(2, 10);
+        console.log(res);
+        document.write("<hr>" + res);
+        res = Math.pow(2, 10);
+        document.write("<hr>" + res);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Объекты</title>
+    <script>
+        let instance = { prototypeA: 222, prototypeB: 444 };
+        document.write("<p>instance.prototypeA = " + instance.prototypeA + "; instance.prototypeB = " +
+        instance.prototypeB + "</p><hr>");
+        instance.prototypeA = 333;
+        instance["prototypeB"] = 555;
+        document.write("<p>instance.prototypeA = " + instance.prototypeA + "; instance.prototypeB = " +
+        instance.prototypeB + "</p><hr>");
+        document.write("<p>instance = " + instance + "</p>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

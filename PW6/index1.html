@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оператор delete в массивах</title>
+    <script>
+        let arr = new Array(0, 1, 2, 3, 4, 5, 6, 7);
+        let str = arr.join(", ");
+        document.write("<p>" + str + "</p>");
+        let index = prompt("Выберите интекс элемента для удаления\n" + arr.join(" "));
+        delete arr[index];
+        document.write("<p>Массив после удаления: " + arr.join(" ") + "</p>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

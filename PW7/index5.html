@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+    <h1>Динамическое заполнение списка</h1>
+    <form name="sel">
+        <select name="listOfLinks"></select>
+        <input type="button" value="Переход" onclick="window.location =
+        document.sel.listOfLinks[document.sel.listOfLinks.selectedIndex].value">
+    </form>
+    <a href="https://rozetka.com.ua/">rozetka</a>
+    <a href="https://allo.ua/">allo</a>
+    <a href="https://www.olx.ua/">olx</a>
+    <a href="https://zieit.edu.ua/">zieit</a>
+    <script>
+    let aElements = document.getElementsByTagName("a");
+    for (let i = 0; i < aElements.length; i++){
+        let text = aElements[i].innerText;
+        let value = aElements[i].getAttribute("href");
+        document.sel.listOfLinks.appendChild(new Option(text, value, false, false));
+    }
+    document.sel.listOfLinks[0].selected = true;
+    </script>
+</body>
+</html>

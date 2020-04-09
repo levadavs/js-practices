@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+        function complete1() {
+            if (document.sel3.pwd.value === document.sel3.pwd1.value)
+                alert("Вас зарегистрировали\nId=" + document.sel3.id.value + ";\nPassword=" + document.sel3.pwd.value);
+            else
+                alert("Ощибка при вводе пароля\nПопробуйте еще раз");
+        }
+    </script>
+</head>
+<body>
+    <h1>Регистрация</h1>
+    <form name="sel3">
+        <table>
+            <tr>
+                <td><b>Идентификатор:</b></td>
+                <td><input type="text" name="id" size="20" onblur="this.value=this.value.toUpperCase()"></td>
+            </tr>
+            <tr>
+                <td><b>Пароль:</b></td>
+                <td><input type="password" name="pwd" size="20" onfocus="this.select()"></td>
+                <td><b>Проверка пароля:</b></td>
+                <td><input type="password" name="pwd1" size="20" onfocus="this.select()"></td>
+            </tr>
+        </table>
+        <input type="button" value="Готово" onclick="complete1()">
+        <input type="reset" value="Сброс">
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вложенные объекты</title>
+    <script>
+        let human = {
+            firstName: "Andrew",
+            lastName: "Tanenbaum",
+            age: 76,
+            occupation:
+                {
+                    company: "ZIEIT",
+                    position: "teacher"
+                },
+            occupation1:
+                {
+                    company: "The University of California, Berkeley",
+                    position: "teacher"
+                }
+        };
+        document.write("<p>Name: " + human.firstName);
+        document.write("<p>Last name: " + human.lastName);
+        document.write("<p>Age: " + human.age);
+        document.write("<p>Institute: " + human.occupation.company);
+        document.write("<p>Position: " + human.occupation.position);
+        document.write("<p>University: " + human.occupation1.company);
+        document.write("<p>Position: " + human.occupation1.position);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

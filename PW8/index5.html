@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index5</title>
+    <script>
+        let sample = [1, 6, 3, 9, 8, 2, 3, 4, 7, 2, 3, 8, 9];
+        let mapped = sample.map(element => element * 10);
+        let arrMarkup = "<p>";
+        mapped.forEach(element => {
+            arrMarkup += element + "; "
+        });
+        arrMarkup += "</p>";
+        document.write(arrMarkup);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

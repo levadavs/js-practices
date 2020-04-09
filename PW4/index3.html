@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Функции JavaScript</title>
+    <script type="text/javascript">
+        let name, sname, age, again;
+        function ask() {
+            name = prompt("Введите имя");
+            sname = prompt("Введите фамилию");
+            age = prompt("Введите возраст");
+        }
+        function say(){
+            document.write("<p>Имя: " + name);
+            document.write("<p>Фамилия: " + sname);
+            document.write("<p>Возраст: " + age);
+        }
+        do {
+            ask();
+            say();
+            again = confirm("Повторить?");
+        }while (again);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

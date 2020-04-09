@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка существования свойства</title>
+    <script>
+        let house = {
+            roof: "<img src='images/Roof.gif'><br>",
+            secondFloor: "<img src='images/SecondFloor.gif'><br>",
+            firstFloor: "<img src='images/FirstFloor.gif'><br>",
+            basement: "<img src='images/Basement.gif'><br>",
+            address: "<p style='color: green'>UK. London. Muswell Hill. N10</p><hr>"
+        };
+        document.write(house.roof);
+        if ("thirdFloor" in house)
+            document.write(house.thirdFloor);
+        else
+            document.write(house.secondFloor);
+        document.write(house.secondFloor);
+        document.write(house.firstFloor);
+        document.write(house.basement);
+        document.write(house.address);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

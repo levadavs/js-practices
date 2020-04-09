@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Строитель</title>
+    <script>
+        let builder = new Object();
+        builder.createRoof = function () {
+            document.write("<img src='images/Roof.gif'><br>");
+        }
+        builder.createFirstFloor = function () {
+            document.write("<img src='images/FirstFloor.gif'><br>");
+        }
+        builder.createSecondFloor = function () {
+            document.write("<img src='images/SecondFloor.gif'><br>");
+        }
+        builder.createBasement = function () {
+            document.write("<img src='images/Basement.gif'>");
+        }
+        document.write("<p><b>Весь дом</b><br></p>");
+        builder.createRoof();
+        builder.createSecondFloor();
+        builder.createFirstFloor();
+        builder.createBasement();
+        document.write("<hr><p><b>Дом без крыши</b><br></p>");
+        builder.createSecondFloor();
+        builder.createFirstFloor();
+        builder.createBasement();
+        document.write("<hr><p><b>Дом без подвала</b><br></p>");
+        builder.createRoof();
+        builder.createSecondFloor();
+        builder.createFirstFloor();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Конструкция for in</title>
+    <script>
+        let house = {
+            roof: "<img src='images/Roof.gif'><br>",
+            secondFloor: "<img src='images/SecondFloor.gif'><br>",
+            firstFloor: "<img src='images/FirstFloor.gif'><br>",
+            basement: "<img src='images/Basement.gif'><br>",
+            address: "<p style='color: green'>UK. London. Muswell Hill. N10</p><hr>"
+        };
+        for (let item in house)
+            document.write(house[item]);
+        let arr = [];
+        let _ind = 0;
+        arr[0] = true;
+        arr[4] = 1;
+        arr[122] = "people";
+        for (_ind in arr){
+            arr[3] = false;
+            console.log(_ind);
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

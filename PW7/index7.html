@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+        let ok = "Тетя Эльза чувствует себя хорошо. \nЮтас";
+        let problem = "Тетя Эльза заболела.\nЮтас";
+        function getDate() {
+            let today = new Date();
+            return today.toLocaleDateString() + "\n";
+        }
+        function checkRadio(form, value) {
+            if (value == "good")
+                document.sel2.letter.value = getDate() + ok;
+            else
+                document.sel2.letter.value = getDate() + problem;
+        }
+    </script>
+</head>
+<body lang="ru">
+    <h1>Отправьте телеграмму</h1>
+    <form name="sel2">
+        <label>
+            <input type="radio" name="code" value="good" onclick="checkRadio(this.form, this.value)">
+            Явка в номере
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="code" value="bad" onclick="checkRadio(this.form, this.value)">
+            Явка провалена
+        </label>
+        <br>
+        <textarea name="letter" rows="3" cols="35"></textarea>
+        <br>
+        <input type="button" value="Готово" onclick="alert(letter.value)">
+        <input type="reset" value="Сброс">
+    </form>
+</body>
+</html>

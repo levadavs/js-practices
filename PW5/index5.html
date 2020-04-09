@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание вложенных объектов через конструтор</title>
+    <script>
+        let human = new Object();
+        human.firstName = "Satya";
+        human.lastName = "Nadella";
+        human.age = 50;
+        human.occupation = new Object();
+        human.occupation.company = "Microsoft";
+        human.occupation.position = "Web developer";
+        document.write("<p>Name: " + human.firstName);
+        document.write("<p>Last name: " + human.lastName);
+        document.write("<p>Age: " + human.age);
+        document.write("<p>Company: " + human.occupation.company);
+        document.write("<p>Position: " + human.occupation.position);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

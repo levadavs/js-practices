@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Необязательные аргументы</title>
+    <script type="text/javascript">
+        function print(msg, count){
+            if (count === undefined)
+                count = 3;
+            for (let i = 0; i < count; i++)
+                document.write("<p>" + msg + "<hr>");
+        }
+        print("hello");
+        print("world", 7);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

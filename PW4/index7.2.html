@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оператор return</title>
+    <script type="text/javascript">
+        function exponentiation(num, pow) {
+            let res = num;
+            if (pow == 1){
+                return res;
+            }else if (pow == 0){
+                res = 1;
+            }else if (pow < 0){
+                pow = Math.abs(pow);
+                for (let i = 2; i <= pow; i++)
+                    res *= num;
+                res = 1 / res;
+            }else{
+                for (let i = 2; i <= pow; i++)
+                    res *= num;
+            }
+            return res;
+        }
+        function nthRoot(num, pow) {
+            if (pow == 1)
+                return num;
+            if (num == 0)
+                return num;
+            let res = Math.pow(num, 1 / pow);
+            return res;
+        }
+        let num = prompt("Введите основание");
+        let pow = prompt("Введите показатель степени");
+        let result = undefined;
+        num = parseInt(num);
+        pow = parseInt(pow);
+        result = exponentiation(num, pow);
+        if (result != undefined && !isNaN(result))
+            document.write("<p>" + num + " в степени " + pow + " равно " + result + "</p>" + "<br>");
+        num = prompt("Введите число");
+        pow = prompt("Введите показатель степени корня");
+        num = parseInt(num);
+        pow = parseInt(pow);
+        result = nthRoot(num, pow);
+        if (result != undefined && !isNaN(result))
+            document.write("<p> Корень степени " + pow + " из числа " + num + " равно " + result + "</p>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

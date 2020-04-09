@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uppercase fist</title>
+    <script>
+        function getStr() {
+            let str = prompt();
+            alert(ucFirst(str));
+        }
+        function ucFirst(str) {
+            if (!str)
+                return str;
+            return str[0].toUpperCase() + str.slice(1);
+        }
+        /*Второй способ*/
+/*        function ucFirst(str) {
+            return (str.charAt(0) == "") ? ("Вы ничего не ввели") : (str.charAt(0).toUpperCase() + str.slice(1));
+        }*/
+        getStr();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

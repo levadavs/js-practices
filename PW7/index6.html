@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+        function complete(){
+            let elem = "Фамилия: " + document.sel1.lastName.value + "\nИмя: " + document.sel1.firstName.value +
+                    "\nВозраст: " + document.sel1.age.value + "\nТелефон: " + document.sel1.phone.value;
+            alert(elem);
+        }
+        function checkAge(age) {
+            if (age < 18)
+                return "18";
+            else
+                return age;
+        }
+    </script>
+</head>
+<body>
+    <h1>Заполните анкету</h1>
+    <form name="sel1">
+        <table>
+            <tr>
+                <td><b>Фамилия:</b></td>
+                <td><input type="text" name="lastName" maxlength="20" onblur="this.value=this.value.toUpperCase()"></td>
+            </tr>
+            <tr>
+                <td><b>Имя:</b></td>
+                <td><input type="text" name="firstName" maxlength="20" onblur="this.value=this.value.toUpperCase()"></td>
+            </tr>
+            <tr>
+                <td><b>Возраст:</b></td>
+                <td>
+                    <input type="text" name="age" value="18" maxlength="3" onblur="this.value=checkAge(value)"
+                           onfocus="this.select()">
+                </td>
+            </tr>
+            <tr>
+                <td><b>Телефон:</b></td>
+                <td><input type="text" name="phone" maxlength="10"></td>
+            </tr>
+        </table>
+        <input type="button" value="Готово" onclick="complete()">
+        <input type="reset" value="Сбрость">
+    </form>
+</body>
+</html>

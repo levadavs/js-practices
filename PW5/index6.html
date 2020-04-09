@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Методы</title>
+    <script>
+        let human = {
+            firstName: "Bill",
+            lastName: "Gates",
+            age: 64,
+            occupation: "<img src='images/Microsoft.jpg'>"
+        };
+        human.show = function () {
+            document.write("<p>Name: " + this.firstName + "</p>");
+            document.write("<p>Last name: " + this.lastName + "</p>");
+            document.write("<p>Age: " + this.age + "</p>");
+            document.write(this.occupation + "<hr>");
+        };
+        human.changeWork = function(occupation){
+            this.occupation = occupation;
+        };
+        human.show();
+        human.changeWork("<img src='images/CyberBionic Systematics.jpg'>");
+        human.show();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
